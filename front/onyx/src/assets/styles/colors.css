@@ -1,0 +1,19 @@
+.onyx-dark-1 {
+    background-color: var(--onyx-darkest);
+}
+
+.onyx-dark-2 {
+    background-color: var(--onyx-darker);
+}
+
+.onyx-dark-3 {
+    background-color: var(--onyx-dark);
+}
+
+.onyx-dark-color {
+    color: var(--onyx-icon);
+}
+
+.onyx-purple {
+    background-color: var(--onyx-purple);
+}
