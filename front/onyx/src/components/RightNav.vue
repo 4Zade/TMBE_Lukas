@@ -5,9 +5,9 @@ export default {
       isResizing: false,
       initialMouseX: 0,
       initialWidth: 240,
-      minWidth: 150,
+      minWidth: 160,
       hideWidth: 60,
-      maxWidthPercentage: 80,
+      maxWidthPercentage: 30,
       width: 240,
     };
   },
@@ -31,7 +31,7 @@ export default {
     resize(event) {
       if (this.isResizing) {
         const dx = event.clientX - this.initialMouseX;
-        const newWidth = this.initialWidth + dx;
+        const newWidth = this.initialWidth - dx;
 
         const maxWidth = (window.innerWidth * this.maxWidthPercentage) / 100;
 
@@ -59,10 +59,10 @@ export default {
 </script>
 
 <template>
-    <nav ref="nav" id="file-container" class="h-screen relative" :style="resizableDivStyle" @mousemove="checkHideNav">
+    <nav ref="nav" id="right-nav-container" class="h-screen relative" :style="resizableDivStyle" @mousemove="checkHideNav">
         <hr 
-            id="left-nav-hr"
-            class="h-full w-2 absolute top-0 right-0 flex flex-col justify-center border-none cursor-col-resize"
+            id="right-nav-hr"
+            class="h-full w-2 absolute top-0 left-0 flex flex-col justify-center border-none cursor-col-resize"
             @mousedown="startResize"
         >
     </nav>

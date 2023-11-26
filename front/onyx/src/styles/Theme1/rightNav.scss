@@ -1,0 +1,35 @@
+#right-nav-container {
+    background-color: $bg-primary-dark;;
+}
+
+#right-nav-container:before {
+    content: "";
+    width: $ribbon-width;
+    height: $ribbon-width;
+    position: absolute;
+    top: 0px;
+    left: -$ribbon-width;
+    border-bottom-right-radius: 50%;
+    box-shadow: 20px 0 0 0;
+    color: $bg-primary-dark;
+    transform: scale(1, -1);
+    z-index: 1;
+}
+
+#right-nav-hr::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 25%;
+    right: 20%;
+    height: 50%;
+    width: 60%;
+    background-color: transparent;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+#right-nav-hr:hover::before {
+    background-color: $accent-dark;
+}

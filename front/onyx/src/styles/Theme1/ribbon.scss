@@ -1,0 +1,32 @@
+.ribbon-container {
+    width: $ribbon-width;
+    min-width: $ribbon-width;
+    background-color: $bg-primary-dark;
+    color: $icon-dark;
+    margin-top: -30px;
+}
+
+.ribbon-container:before {
+    content: "";
+    width: $ribbon-width;
+    height: $ribbon-width;
+    position: absolute;
+    top: $title-bar-height;
+    left: $ribbon-width;
+    border-bottom-right-radius: 50%;
+    box-shadow: 20px 0 0 0;
+    color: $bg-primary-dark;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.settings-grid {
+    grid-auto-rows: $ribbon-width / 1.25;
+    grid-template-columns: 100%;
+}
+
+.project-grid {
+    grid-auto-rows: $ribbon-width;
+    grid-template-columns: 100%;
+    margin-top: $title-bar-height;
+}
