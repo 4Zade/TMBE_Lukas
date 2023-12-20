@@ -1,0 +1,10 @@
+#context-menu {
+    background-color: $bg-context-menu-dark;
+    color: $icon-dark;
+}
+
+.context-btn:hover {
+    background-color: $context-menu-highlight-dark;
+    cursor: pointer;
+    color: white;
+}

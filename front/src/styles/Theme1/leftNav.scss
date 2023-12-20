@@ -1,0 +1,35 @@
+#file-container {
+    background-color: $bg-secondary-dark;
+    width: 240px;
+}
+
+#left-nav-hr::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 25%;
+    right: 20%;
+    height: 50%;
+    width: 60%;
+    background-color: transparent;
+    border-radius: 8px;
+
+    transition: 0.3s;
+  }
+
+#left-nav-hr:hover::before {
+    background-color: #9A85C7;
+}
+
+#file-explorer-btn svg {
+    color: transparent;
+    transition: 0.2s;
+}
+
+#file-explorer-btn:hover svg {
+    color: $icon-dark;
+}
+
+#file-explorer-btn:hover svg:hover {
+    color: $accent-dark;
+}
