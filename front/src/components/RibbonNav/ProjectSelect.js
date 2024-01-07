@@ -12,7 +12,7 @@ export default {
         { key: 2, name: 'Project two', icon: 'tabler:folder' },
         { key: 3, name: 'Project two', icon: 'tabler:folder' },
       ],
-      ribbonButtons: [
+      RibbonButtons: [
         { name: 'Clipboard', icon: 'tabler:clipboard-text' },
         { name: 'Graph', icon: 'tabler:sitemap' },
         { name: 'Search', icon: 'tabler:search' },

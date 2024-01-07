@@ -4,10 +4,12 @@ export default {
         isResizing: false,
         initialMouseX: 0,
         initialWidth: 240,
-        minWidth: 160,
-        hideWidth: 60,
+        minWidth: 150,
+        hideWidth: 40,
         maxWidthPercentage: 30,
         width: 240,
+
+        isNavHidden: true,
       };
     },
     computed: {
@@ -18,6 +20,10 @@ export default {
       },
     },
     methods: {
+      toggleNav() {
+        this.isNavHidden = !this.isNavHidden;
+        this.$refs.nav.style.display = this.isNavHidden ? "none" : "block";
+      },
       startResize(event) {
         event.preventDefault();
         this.isResizing = true;
@@ -47,10 +53,16 @@ export default {
         window.removeEventListener("mouseup", this.stopResize);
       },
       checkHideNav(event) {
-        if (this.isResizing && event.clientX < this.hideWidth) {
-          this.$refs.nav.style.display = "none";
-        } else {
-          this.$refs.nav.style.display = "block";
+        if (this.isResizing) {
+          const rightDistance = window.innerWidth - event.clientX;
+  
+          if (rightDistance < this.hideWidth) {
+            this.$refs.nav.style.display = "none";
+            this.isNavHidden = true;  // Assuming you want to track the hidden state
+          } else {
+            this.$refs.nav.style.display = "block";
+            this.isNavHidden = false;  // Assuming you want to track the hidden state
+          }
         }
       },
     },

@@ -55,8 +55,10 @@ export default {
       checkHideNav(event) {
         if (this.isResizing && event.clientX < this.hideWidth) {
           this.$refs.nav.style.display = "none";
+          this.isNavHidden = true;
         } else {
           this.$refs.nav.style.display = "block";
+          this.isNavHidden = false;
         }
       },
     },

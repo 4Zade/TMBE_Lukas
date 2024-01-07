@@ -160,6 +160,17 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+      'onyx-dark-0': '#111214',
+      'onyx-dark-1': '#1E1F22',
+      'onyx-dark-2': '#2B2D31',
+      'onyx-dark-3': '#313338',
+      'onyx-dark-highlight': 'rgba(171, 171, 171, 0.1)',
+      'onyx-dark-accent': '#9A85C7',
+      'onyx-dark': '#8E8E8E',
+      'onyx-light-0': '#E3E5E8',
+      'onyx-light-1': '#F2F3F5',
+      'onyx-light-accent': '#C892FF',
+      'onyx-light': '#1E1F22',
     }),
     columns: {
       auto: 'auto',
@@ -523,6 +534,8 @@ module.exports = {
       min: 'min-content',
       max: 'max-content',
       fit: 'fit-content',
+
+      'tb': '2rem'
     }),
     hueRotate: {
       0: '0deg',
@@ -647,6 +660,7 @@ module.exports = {
       max: 'max-content',
       fit: 'fit-content',
       prose: '65ch',
+      ribbon: '2.5rem',
       ...breakpoints(theme('screens')),
     }),
     minHeight: {
@@ -663,6 +677,7 @@ module.exports = {
       min: 'min-content',
       max: 'max-content',
       fit: 'fit-content',
+      ribbon: '2.5rem',
     },
     objectPosition: {
       bottom: 'bottom',
@@ -973,6 +988,8 @@ module.exports = {
       min: 'min-content',
       max: 'max-content',
       fit: 'fit-content',
+      
+      'ribbon': '2.5rem',
     }),
     willChange: {
       auto: 'auto',
